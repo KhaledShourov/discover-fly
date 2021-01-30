@@ -95,7 +95,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button onclick="bookedTicket()" class="btn-style">Book Now</button>
         </div>
 
         <div class="booking-content">
@@ -171,7 +171,7 @@
                 const ticketCount = parseInt(ticketInput.value);
 
                 const totalPrice = vipTicketCount * 150 + ticketCount * 100;
-                document.getElementById('total-price').innerText = totalPrice;
+                document.getElementById('total-price').innerText = '$' + totalPrice;
 
                 const tax = totalPrice * 0.1;
                 document.getElementById('tax-amount').innerText = '$' + tax;
@@ -179,6 +179,11 @@
                 const grandTotal = totalPrice + tax;
                 document.getElementById('grand-total').innerText = '$' + grandTotal;
             }
+
+            //Booked Ticket Function Massage
+             function bookedTicket(){
+                 alert("Welcome to Booked Ticket");
+             }
         </script>
 
         <!--Thank You-->
